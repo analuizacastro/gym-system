@@ -1,0 +1,57 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+    <form class="card" method="POST" action="/instructors">
+        <section class="avatar" style="background: url(https://source.unsplash.com/collection/8654464/500x500) no-repeat center center /  cover"></section>
+        <section class="details">
+            <h3>New Instructor</h3>
+            <div class="item">
+                <div>Avatar URL</div>
+                <div>
+                    <input 
+                        type="url" 
+                        name="avatar-url"
+                        placeholder="https://"
+                    >
+                </div>
+            </div>
+            <div class="item">
+                <div>Instructor</div>
+                <div>
+                    <input 
+                        type="text" 
+                        name="name"
+                        placeholder="Arnold Schwarzenegger"
+                    >
+                </div>
+            </div>
+            <div class="item">
+                <div>Birth Date</div>
+                <div>
+                    <input 
+                        type="date" 
+                        name="birth"
+                    >
+                </div>
+            </div>
+            <div class="item">
+                <div>Gender</div>
+                <div>
+                    <span class="input"><input type="radio" name="gender" value="M" checked>Male</span>
+                    <span class="input"><input type="radio" name="gender" value="F">Female</span>
+                </div>
+            </div>
+            <div class="item">
+                <div>Activities</div>
+                <div>
+                    <input 
+                        type="text" 
+                        name="services"
+                        placeholder="crossfit, bodybuilding"
+                    >
+                </div>
+            </div>
+            <button type="submit">Register</button>
+        </section>
+    </form>
+{% endblock content %}
